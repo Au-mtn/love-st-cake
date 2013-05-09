@@ -1,0 +1,405 @@
+/* 
+Project Name: Love Street Cakes
+Client: Love Street Cakes
+Author: Morgan Goldberg
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 100%;
+     line-height: 1.4;
+     font-family: 'EB Garamond', serif;
+     letter-spacing: .07em;
+}
+
+a {
+     text-decoration: none;
+     color: #000;
+}
+
+a:hover {
+     color: #F46B89;
+}
+
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/* Center the container */
+#container {
+	width: 100%;
+     position: relative;
+}
+
+h1 a {
+     font-size: 4em;
+     line-height: 1em;
+     color: #EC2462;
+     font-family: 'Satisfy', cursive;
+}
+
+h1 a:hover {
+     color: #EC2462;
+}
+
+h2 {
+     padding: .5em 0;
+     font-size: 2.5em;
+     text-align: center;
+     font-family: 'Satisfy', cursive;
+}
+
+blockquote {
+     text-align: center;
+     font-size: 1.5em;
+     padding: 3em 0;
+     background: url(../images/pink_cake.jpg) no-repeat -150px;
+     color: #fff; 
+}
+
+#hero {
+     display: none;
+}
+
+h3 {
+     font-size: 1.5em;
+     color: #EC2462;
+}
+
+/******************************************
+/* HEADER                   
+/*******************************************/
+
+header {
+     text-align: center;
+     padding: 3em 1em;
+}
+
+header .border{
+     height: 20px;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background: #ec2462;
+     background: -moz-linear-gradient(left,  #ec2462 0%, #f63466 28%, #f46b89 67%, #f0b69e 100%);
+     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ec2462), color-stop(28%,#f63466), color-stop(67%,#f46b89), color-stop(100%,#f0b69e));
+     background: -webkit-linear-gradient(left,  #ec2462 0%,#f63466 28%,#f46b89 67%,#f0b69e 100%);
+     background: -o-linear-gradient(left,  #ec2462 0%,#f63466 28%,#f46b89 67%,#f0b69e 100%);
+     background: -ms-linear-gradient(left,  #ec2462 0%,#f63466 28%,#f46b89 67%,#f0b69e 100%);
+     background: linear-gradient(to right,  #ec2462 0%,#f63466 28%,#f46b89 67%,#f0b69e 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec2462', endColorstr='#f0b69e',GradientType=1 );
+     opacity: 0.75;
+     z-index: 99;
+}
+
+nav {
+     margin-top: 30px;
+}
+
+ul#nav li {
+     display: inline-block;
+     text-transform: uppercase;
+     padding: 0 .4em;
+}
+
+ul#nav li a:hover{
+     color: #000;
+     border-bottom: 2px solid #F46B89;
+}
+
+li.active a {
+     border-bottom: 2px solid #000;
+}
+
+/******************************************
+/* MAIN-CONTENT                  
+/*******************************************/
+
+#main-content {
+     padding: 0 1em 3em 1em;
+     margin-bottom: 3em;
+}
+
+#larger-screens {
+      display: none;
+}
+
+section {
+     padding: 2em 0 1em 0;
+}
+
+section img {
+     width: 100%;
+     padding-bottom: 1em;
+}
+
+.home-content {
+     float: none;
+}
+
+#tasting-info {
+     margin-bottom: 2em;
+}
+
+.flavor-list{
+     padding: 2em;
+     background-color: #ccc;
+     text-align: center;
+}
+
+p#signature {
+     margin-top: 1.3em;
+     font-size: 1.1em;
+     font-family: 'Satisfy', cursive;
+     color: #EC2462;
+}
+
+
+
+
+/******************************************
+/* FORM                   
+/*******************************************/
+
+form p {
+     display: block;
+     margin-bottom: .5em;
+     list-style: none;
+     overflow: hidden;
+}
+
+form p label {
+     display: block;
+     padding-right: .5em;
+     font-size: 1em;
+     float: left;
+     margin-bottom: .2em;
+}
+
+form p input.text, form p textarea.text {
+     padding: .4em .5em;
+     color: #F46B89;
+     background-color: #ccc;
+     border: none;
+     width: 100%;
+}
+
+form p input.text:focus, form p textarea.text:focus {
+     border-color: #F46B89;
+     background-color: #ccc;
+     outline: none;
+}
+
+
+form p input#submit-btn {
+     width: auto;
+     padding: .6em 1.5em;
+     background-color: gray;
+     font-size: 1.1em;
+     font-family: 'Satisfy', cursive;
+     color: #fff;
+     border: none;
+     outline: none;
+     cursor: pointer;
+}
+
+form p input#submit-btn:hover {
+     background-color: #F46B89;
+}
+
+#error {
+     color: #EC2462;
+     font-size: 10px;
+     display: none;
+}
+.needsfilled {
+     background: #EC2462;
+     color: white;
+}
+
+
+
+/******************************************
+/* FOOTER                   
+/*******************************************/
+
+footer {
+     text-align: center;
+     background: #000;
+     color: #EC2462;
+     padding: 2em;
+     font-size: .9em;
+}
+
+#social-media ul {
+     padding-bottom: 2em;
+}
+
+#social-media ul li {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: #000;   
+      text-indent: -9999em;
+}
+
+#social-media ul li.twitter {
+     background: url(../images/socialNav.png) 0px 64px;
+}
+#social-media ul li.facebook {
+     background: url(../images/socialNav.png) -60px 64px; 
+}
+
+#social-media ul li.flickr {
+     background: url(../images/socialNav.png) -120px 64px; 
+}
+
+#social-media ul li.instagram {
+     background: url(../images/socialNav.png) -180px 64px; 
+}
+
+#social-media ul li.blogger {
+     background: url(../images/socialNav.png) -240px 64px; 
+}
+
+
+
+#social-media ul li.twitter:hover {
+     background: url(../images/socialNav.png) 0px 0px; 
+}
+
+#social-media ul li.facebook:hover {
+     background: url(../images/socialNav.png) -60px 0px; 
+}
+
+#social-media ul li.flickr:hover {
+     background: url(../images/socialNav.png) -120px 0px; 
+}
+
+#social-media ul li.instagram:hover {
+     background: url(../images/socialNav.png) -180px 0px; 
+}
+
+#social-media ul li.blogger:hover {
+     background: url(../images/socialNav.png) -240px 0px; 
+}
+
+/******************************************
+/* MEDIA QUERIES                   
+/*******************************************/
+
+
+@media screen and (min-width: 700px) {
+   #main-content {
+      margin-right: 10%;
+      margin-left: 10%;
+   }
+
+   .home-content {
+      width: 100%;
+   }
+
+   .mobile-only {
+      display: none;
+   }
+
+   #larger-screens {
+      display: inline-block;
+      width: 100%;
+      background: url(../images/pink_cake.jpg) no-repeat -10px -30px;
+   }
+
+   #larger-screens p {
+     width: 50%;
+     margin: 0 0 0 50%;
+     padding: 1em;
+     height: 25em;
+   }
+
+   .flavor-list {
+      width: 31.333333333%;
+      margin-right: 3%;
+      margin-bottom: 5em;
+      float: left;
+      height: 32em;
+   }
+
+   section {
+      width: 45%;
+      margin-right: 5%;
+      float: left;
+   }
+   section:last-child {
+      margin-right: 0;
+   }
+
+   blockquote {
+      display: none;
+   }
+  
+  
+}
+
+@media screen and (min-width: 900px){
+     body {
+          font-size: 1.1em;
+     }
+
+     #main-content {
+          margin-right: 15%;
+          margin-left: 15%;
+     }
+
+     #larger-screens {
+          padding: 3em;
+          font-size: 1.1em;
+          height: 25em;
+     }
+}
+
+
+
+
