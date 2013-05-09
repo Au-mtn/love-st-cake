@@ -9,7 +9,7 @@ Copyright 2009 Joren Rapini
 
 $(document).ready(function(){
 	// Place ID's of all required fields here.
-	required = ["name", "email", "phone", "event", "date", "location", "guests"];
+	required = ["name", "email", "phone", "datepicker", "guests", "event", "location"];
 	// If using an ID other than #email or #error then replace it here
 	email = $("#email");
 	errornotice = $("#error");
@@ -29,12 +29,16 @@ $(document).ready(function(){
 				input.removeClass("needsfilled");
 			}
 		}
+
+		// Validate drop downs.
+		
+
 		// Validate the e-mail.
 		if (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email.val())) {
 			email.addClass("needsfilled");
 			email.val(emailerror);
 		}
-
+		
 		//if any inputs on the page have the class 'needsfilled' the form will not submit
 		if ($(":input").hasClass("needsfilled")) {
 			return false;

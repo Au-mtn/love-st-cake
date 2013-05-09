@@ -186,7 +186,7 @@ section img {
 
 .flavor-list{
      padding: 2em;
-     background-color: #ccc;
+     background-color: #ddd;
      text-align: center;
 }
 
@@ -252,15 +252,13 @@ form p input#submit-btn:hover {
 
 #error {
      color: #EC2462;
-     font-size: 10px;
+     font-size: 1em;
      display: none;
 }
+
 .needsfilled {
-     background: #EC2462;
-     color: white;
+     color: #EC2462;
 }
-
-
 
 /******************************************
 /* FOOTER                   
