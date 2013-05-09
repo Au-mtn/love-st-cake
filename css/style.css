@@ -354,7 +354,8 @@ footer {
      width: 50%;
      margin: 0 0 0 50%;
      padding: 1em;
-     height: 25em;
+     font-size: 1.1em;
+     height: 23em;
    }
 
    .flavor-list {
@@ -381,7 +382,7 @@ footer {
   
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 1190px){
      body {
           font-size: 1.1em;
      }
@@ -393,8 +394,8 @@ footer {
 
      #larger-screens {
           padding: 3em;
-          font-size: 1.1em;
-          height: 25em;
+          font-size: 1.2em;
+          height: 22em;
      }
 }
 
